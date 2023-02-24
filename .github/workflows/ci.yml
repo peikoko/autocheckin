@@ -22,3 +22,4 @@ jobs:
           git pull --rebase
           git commit --allow-empty -m "每天一个green"
           git push
+
