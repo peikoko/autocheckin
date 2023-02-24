@@ -3,10 +3,9 @@ name: ci
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
-    - cron: "30 */6 * * *"
-  workflow_dispatch:
+    - cron: '3,17,35,45,58 8-18 * * *'
 
 jobs:
   autogreen:
@@ -17,9 +16,9 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "peikoko2813042970@gmail.com"
-          git config --local user.name "peikoko"
+          git config --local user.email "dongdehusband@gmail.com"
+          git config --local user.name "dongdongzhuzhu"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          git commit --allow-empty -m "update!"
+          git commit --allow-empty -m "每天一个green"
           git push
