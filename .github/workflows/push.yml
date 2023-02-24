@@ -20,6 +20,6 @@ jobs:
           git config --local user.name "peikoko"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
-          git commit --allow-empty -m "自动提交!"
+          git commit --allow-empty -m "自动!"
           git push
 
